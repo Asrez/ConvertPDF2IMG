@@ -1,0 +1,776 @@
+/* var colors*/
+:root{
+    --bg-color-body-1: rgba(32, 72, 117, 1);
+    --bg-color-body-2: rgba(9, 12, 47, 1);
+    --color-white: #fff;
+    --color-black: #000;
+    --buttun-bg-color-1: rgb(23, 23, 67);
+    --buttun-bg-color-2: rgba(197, 199, 210, 1);
+    --bg-color-circel: rgba(79, 195, 124, 1);
+    --bg-box-convert: rgba(0, 0, 0, 0.4);
+    --bg-box-getfile: rgba(255, 255, 255, 0.3);
+    --bg-box-getfile2: rgba(255, 255, 255, 0.1);
+    --bg-shape-pink: rgba(253, 88, 122, 1);
+    --bg-shape-yellow: rgba(253, 194, 71, 1);
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    user-select: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(var(--bg-color-body-1), var(--bg-color-body-2));
+    position: relative;
+}
+.shipe-1{
+    position: absolute;
+    top: 160px;
+    right: 70px;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-shape-pink);
+    border-radius: 50%;
+}
+.shipe-5{
+    position: absolute;
+    bottom: 280px;
+    left: -100px;
+    width: 22px;
+    height: 22px;
+    background: var(--bg-color-circel);
+    border-radius: 50%;
+}
+/* start header */
+header{
+    width: 100%;
+    height: 12vh;
+}
+header nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header nav button{
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+    margin-right: 50px;
+    background: linear-gradient(to right, var(--buttun-bg-color-2), var(--buttun-bg-color-1));
+    color: var(--color-white);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+header nav .logo{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    gap: 10px;
+}
+header nav .logo img{
+    width: 25px;
+    height: 25px;
+}
+header nav .logo h1{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+header nav .menu{
+    width: max-content;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav .menu ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+header nav .menu ul li a{
+    color: var(--color-white);
+    position: relative;
+}
+header nav .menu ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: var(--bg-color-circel);
+    transition: all 0.3s ease-in-out;
+}
+header nav .menu ul li a:hover::after{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+/* end header */
+
+/* start main */
+main{
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+main .text-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    position: relative;
+}
+main .text-top .shipe-2{
+    position: absolute;
+    top: -25px;
+    right: 140px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(130deg, var(--buttun-bg-color-1), var(--buttun-bg-color-2));
+    border-radius: 50%;
+}
+main .text-top .shipe-3{
+    position: absolute;
+    top: 72px;
+    left: 310px;
+    width: 10px;
+    height: 10px;
+    background: var(--bg-shape-yellow);
+    border-radius: 50%;
+}
+main .text-top .shipe-4{
+    position: absolute;
+    top: 120px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(130deg, var(--buttun-bg-color-1), var(--buttun-bg-color-2));
+    border-radius: 50%;
+}
+main .text-top .shape-6{
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    transform: rotate(90deg);
+}
+main .text-top h1{
+    font-size: 70px;
+    font-weight: 300;
+    color: var(--bg-color-circel);
+    letter-spacing: 8px;
+}
+main .text-top h2{
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: 4px;
+}
+main .text-top p{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(105, 142, 177, 1);
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+main .main-box-convert{
+    width: 900px;
+    height: max-content;
+    background: var(--bg-box-convert);
+    border-radius: 18px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.box-get-file{
+  position: relative;
+    width: 90%;
+    height: max-content;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.box-get-file .input-drop{
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0;
+}
+.main-box-convert .box-get-file img{
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+}
+.main-box-convert .box-get-file h3{
+    color: var(--color-white);
+}
+.main-box-convert .box-get-file p{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.main-box-convert .box-get-file .input-coose{
+    position: relative;
+}
+.main-box-convert .box-get-file .input{
+    border: none;
+    outline: none;
+    background: var(--bg-box-getfile);
+    color: var(--color-white);
+    width: 130px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 10px 0;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+.main-box-convert .box-get-file .input-coose button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: var(--bg-box-getfile);
+    color: var(--color-white);
+    width: 130px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 10px 0;
+    cursor: pointer;
+    z-index: -1;
+}
+.main-box-convert .output-selection{
+    width: 90%;
+    height: 60px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-box-convert .output-selection .left{
+    width: 300px;
+    height: 100%;
+    background: var(--bg-box-getfile2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-box-convert .output-selection .icon{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-box-convert .output-selection .right{
+    width: 300px;
+    height: 100%;
+    background: var(--bg-box-getfile2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p1{
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: var(--color-white) !important;
+    margin-top: 0 !important;
+    margin-left: 20px;
+}
+.p2{
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: var(--color-white) !important;
+    margin-top: 0 !important;
+    margin-right: 20px;
+}
+.line{
+    width: 1px;
+    height: 70%;
+    background: var(--color-white);
+}
+.right .p2{
+    cursor: pointer !important;
+    color: rgb(18, 122, 212) !important;
+}
+.main-box-convert .convert-button{
+    width: 170px;
+    height: 50px;
+    border-radius: 8px;
+    background: var(--bg-box-getfile2);
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.main-box-convert .convert-button h4{
+    color: var(--color-white);
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.main-box-convert .convert-button img{
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.main-box-convert .convert-button:hover img{
+    margin-left: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.text-after-output{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+.text-after-output.active2{
+  display: block;
+}
+.text-bottom{
+  color: var(--color-white) !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+}
+.text-bottom span{
+  font-size: 14px !important;
+  font-weight: bold !important;
+  margin: 0 2px;
+}
+.loading-convert{
+  width: 100%;
+  height: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.loading-convert.active3{
+  display: flex;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.loading-convert .box-null{
+  width: 70%;
+  height: 100%;
+  background-color: var(--bg-box-getfile);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.loading-convert .box-null .box-fill{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(95, 219, 220);
+}
+/* end main */
+/* start responsive */
+@media screen and (min-height:700px){
+  main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+  
+@media screen and (max-width:1200px){
+    header nav .logo h1 {
+        font-size: 20px;
+      }
+      header nav .logo img {
+        width: 20px;
+        height: 20px;
+      }
+      header nav .menu ul li a {
+        font-size: 15px;
+      }
+      header nav button {
+        padding: 10px 20px;
+        margin-right: 50px;
+        font-size: 13px;
+      }
+    main .text-top {
+        margin-top: 0px;
+      }
+      main .text-top h1 {
+        font-size: 55px;
+      }
+      main .text-top h2 {
+        font-size: 45px;
+      }
+      main .text-top p {
+        font-size: 10px;
+        margin-top: 12px;
+      }
+      main .main-box-convert{
+        width: 700px;
+        margin-top: 20px;
+    }
+    .shipe-1 {
+        top: 130px;
+        right: 55px;
+        width: 8px;
+        height: 8px;
+      }
+      main .text-top .shipe-3 {
+        top: 60px;
+        left: 235px;
+        width: 7px;
+        height: 7px;
+      }
+    main .text-top .shipe-2 {
+        top: 40px;
+        right: 50px;
+        width: 32px;
+        height: 32px;
+      }
+      main .text-top .shipe-4 {
+        top: 90px;
+        left: 40px;
+        width: 25px;
+        height: 25px;
+      }
+      .shipe-5 {
+        bottom: 185px;
+        left: -70px;
+        width: 20px;
+        height: 20px;
+      }
+      main .text-top .shape-6 {
+        top: 70px;
+      }
+      .text-top svg{
+        width: 90px;
+        height: 80px;
+      }
+      .main-box-convert .output-selection {
+        height: 50px;
+      }
+      .main-box-convert .output-selection .left {
+        width: 250px;
+      }
+      .main-box-convert .output-selection .right {
+        width: 250px;
+      }
+      .main-box-convert .output-selection .icon img{
+        width: 28px;
+        height: 28px;
+      }
+      .p1 {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+      }
+      .p2 {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+      }
+      .text-bottom{
+        font-size: 10px !important;
+      }
+}
+
+@media screen and (max-width:860px){
+    header {
+        width: 100%;
+        height: 10vh;
+      }
+      header nav button {
+        padding: 7px 14px;
+        margin-right: 10px;
+        font-size: 12px;
+      }
+      header nav .logo {
+        margin-left: 10px;
+        gap: 8px;
+      }
+      header nav .logo h1 {
+        font-size: 15px;
+      }
+      header nav .logo img {
+        width: 17px;
+        height: 17px;
+      }
+      header nav .menu ul li a {
+        font-size: 13px;
+      }
+      header nav .menu ul {
+        gap: 45px;
+      }
+      main .text-top h1 {
+        font-size: 45px;
+      }
+      main .text-top h2 {
+        font-size: 35px;
+      }
+      main .text-top p {
+        font-size: 9px;
+        margin-top: 10px;
+      }
+      .shipe-1 {
+        top: 80px;
+        right: 25px;
+        width: 7px;
+        height: 7px;
+      }
+      main .text-top .shipe-2 {
+        top: 35px;
+        right: 50px;
+        width: 22px;
+        height: 22px;
+      }
+      main .text-top .shipe-3 {
+        top: 50px;
+        left: 155px;
+        width: 5px;
+        height: 5px;
+      }
+      main .text-top .shipe-4 {
+        top: 85px;
+        left: 20px;
+        width: 19px;
+        height: 19px;
+      }
+      main .main-box-convert {
+        width: 500px;
+        margin-top: 50px;
+      }
+      .text-top svg {
+        width: 80px;
+        height: 60px;
+      }
+      .shipe-5 {
+        bottom: 225px;
+        left: -30px;
+        width: 15px;
+        height: 15px;
+      }
+      main .text-top .shape-6 {
+        top: 110px;
+        right: -20px;
+      }
+      .main-box-convert .box-get-file img {
+        width: 35px;
+        height: 35px;
+        margin-top: 8px;
+      }
+      .main-box-convert .box-get-file h3 {
+        font-size: 15px;
+        margin-top: 3px;
+      }
+      .main-box-convert .box-get-file p {
+        font-size: 18px;
+        margin-top: 7px;
+      }
+      .main-box-convert .output-selection {
+        height: 45px;
+      }
+      .main-box-convert .output-selection .left {
+        width: 190px;
+      }
+      .main-box-convert .output-selection .right {
+        width: 190px;
+      }
+      .p1 {
+        font-size: 12px !important;
+        margin-left: 10px;
+      }
+      .p2 {
+        font-size: 12px !important;
+        margin-right: 8px;
+      }
+      .main-box-convert .output-selection .icon img {
+        width: 23px;
+        height: 23px;
+      }
+      .main-box-convert .convert-button {
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+      }
+      .main-box-convert .convert-button h4 {
+        font-size: 15px;
+      }
+      .main-box-convert .convert-button img {
+        width: 15px;
+        height: 15px;
+      }
+      main .text-top {
+        gap: 10px;
+      }
+      .text-bottom{
+        font-size: 8px;
+        max-width: 90%;
+        margin: 0 auto;
+        line-height: 17px;
+      }
+      .text-bottom span{
+        font-size: 12px !important;
+      }
+}
+
+@media screen and (max-width:560px) {
+    header{
+      height: 8vh;
+    }
+    header nav button {
+        padding: 5px 10px;
+        margin-right: 10px;
+        font-size: 8px;
+      }
+      header nav .logo h1 {
+        font-size: 10px;
+      }
+      header nav .logo img {
+        width: 13px;
+        height: 13px;
+      }
+      header nav .menu ul {
+        gap: 12px;
+      }
+      header nav .menu ul li a {
+        font-size: 11px;
+      }
+      main .text-top h1 {
+        font-size: 25px;
+        margin-top: 15px;
+      }
+      main .text-top h2 {
+        font-size: 25px;
+      }
+      main .text-top p {
+        font-size: 7px;
+        margin-top: 5px;
+      }
+      main .main-box-convert {
+        width: 280px;
+        margin-top: 50px;
+      }
+      .shipe-1 {
+        top: 55px;
+        right: 15px;
+        width: 5px;
+        height: 5px;
+      }
+      main .text-top .shipe-2 {
+        top: 25px;
+        right: 16px;
+        width: 15px;
+        height: 15px;
+      }
+      main .text-top .shipe-3 {
+        top: 50px;
+        left: 82px;
+        width: 4px;
+        height: 4px;
+      }
+      main .text-top .shipe-4 {
+        top: 63px;
+        width: 13px;
+        height: 13px;
+      }
+      .shipe-5 {
+        opacity: 0;
+      }
+      main .text-top .shape-6 {
+        top: 115px;
+        right: -10px;
+      }
+      .text-top svg {
+        width: 70px;
+        height: 45px;
+      }
+      .main-box-convert .box-get-file img {
+        width: 30px;
+        height: 30px;
+      }
+      .main-box-convert .box-get-file h3 {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+      .main-box-convert .box-get-file p {
+        font-size: 15px;
+      }
+      .main-box-convert .box-get-file .input {
+        width: 100px;
+        height: 25px;
+        margin: 12px 0;
+      }
+      .main-box-convert .box-get-file .input-coose button {
+        width: 100px;
+        height: 25px;
+        margin: 12px 0;
+      }
+      .main-box-convert .output-selection {
+        flex-direction: column;
+        height: max-content;
+        gap: 10px;
+      }
+      .main-box-convert .output-selection .left {
+        width: 80%;
+        height: 35px;
+      }
+      .main-box-convert .output-selection .right {
+        width: 80%;
+        height: 35px;
+      }
+      .main-box-convert .output-selection .icon img {
+        transform: rotate(90deg);
+      }
+      .main-box-convert .convert-button {
+        width: 130px;
+        height: 35px;
+        margin-top: 25px;
+      }
+      .main-box-convert .convert-button h4 {
+        font-size: 13px;
+      }
+      .main-box-convert .convert-button img {
+        width: 13px;
+        height: 13px;
+      }
+      .main-box-convert .convert-button:hover img{
+        margin-left: 2px;
+    }
+}
+/* end responsive */
